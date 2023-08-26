@@ -31,7 +31,7 @@ export default async function Home({searchParams}) {
         {results && results.map(data => {
           return (
             <li className="card" key={`${data.id}`}>
-              <Card id={data.id} name={data?.name || "Unknown"} image={data.image} />
+              <Card data={data} />
             </li>
           )
         })}

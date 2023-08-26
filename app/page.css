@@ -77,11 +77,20 @@ footer a {
   gap: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: rgba(var(--foreground-rgb), 0.09) 0px 0px 0px 1px;
+  border: 1px solid rgba(var(--foreground-rgb),0.09);
   transition: all 0.3s ease-in-out;
 }
 
+.card a.red{
+  border: 1px solid rgba(180, 70, 70, 0.7);
+}
+
+.card a.green{
+  border: 1px solid rgba(95, 166, 53, 0.7);
+}
+
 .card a:hover{
+  border-color: transparent;
   box-shadow: rgba(var(--foreground-rgb),0.1) 0px 4px 6px -1px, rgba(var(--foreground-rgb),0.06) 0px 2px 4px -1px;
 }
 
