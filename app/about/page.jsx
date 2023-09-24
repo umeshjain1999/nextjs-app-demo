@@ -1,4 +1,6 @@
-import { prata } from "@/app/layout"
+import { Prata } from "next/font/google";
+
+export const prata = Prata({ subsets: ['latin'], weight: '400' })
 
 export default function Page() {
   return (

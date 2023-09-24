@@ -9,14 +9,37 @@ main{
 
 button {
   all: unset;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  border: 2px dotted rgba(var(--foreground-rgb),1);
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in;
+}
+
+.button:hover{
+  border-color: rgba(var(--foreground-rgb),0.4);
 }
 
 /* header */
 header {
+  position: relative;
   padding: 1rem;
   border-bottom: 1px solid rgba(var(--foreground-rgb), 0.09);
   display: flex;
   gap: 1rem;
+}
+
+header button {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 header .active{
@@ -115,20 +138,6 @@ footer a {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.pagination .next,.pagination .prev,.back-button {
-  display: inline-block;
-  cursor: pointer;
-  border: 2px dotted rgba(var(--foreground-rgb),1);
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  /* padding: 0.3rem 0.5rem; */
-  transition: all 0.2s ease-in;
-}
-
-.pagination .next:hover,.pagination .prev:hover,.back-button:hover {
-  border-color: rgba(var(--foreground-rgb),0.4);
 }
 
 .back-button{

@@ -1,7 +1,7 @@
 import { API_ENDPOINT } from "@/constant";
 import Image from "next/image";
-import Pagination from "./pagination";
-import Card from "./card";
+import Card from "@/components/card";
+import Pagination from "@/components/pagination";
 
 async function getCharacters (page) {
   const res = await fetch(`${API_ENDPOINT}/character/?page=${page}`,{

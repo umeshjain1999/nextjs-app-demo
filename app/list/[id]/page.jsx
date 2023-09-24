@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { prata } from "@/app/layout";
+import { Prata } from "next/font/google";
+export const prata = Prata({ subsets: ['latin'], weight: '400' })
 
 async function getCharacterByID (id) {
   const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
@@ -14,7 +15,7 @@ export default async function Page({params}) {
   return (
     <main className="main">
       <div className="main-wrapper">
-        <Link href="/" className="back-button">Back</Link>
+        <Link href="/" className="button back-button">Back</Link>
         <h1 className={`title ${prata.className}`}>{name}</h1>
         <div>
           <Image
