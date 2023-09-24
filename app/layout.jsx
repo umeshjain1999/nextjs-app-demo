@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 const prata = Prata({ subsets: ['latin'], weight: '400' })
 
 export const metadata = {
-  title: 'Rick and Morty',
+  title: 'Rick and Morty - Home',
   description: 'NextJS Demo App to demonstrate page routing and other features',
 }
 

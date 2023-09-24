@@ -1,12 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Prata } from "next/font/google";
+
 export const prata = Prata({ subsets: ['latin'], weight: '400' })
 
 async function getCharacterByID (id) {
   const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
   return res.json();
 }
+
+export async function generateMetadata({ params, searchParams }, parent){
+
+  const {id} = params;
+  const character = await getCharacterByID(id);
+  
+  return {
+    title: `Rick and Morty - ${character.name}`,
+    description: 'NextJS Demo App to demonstrate page routing and other features',
+  }
+}
+
 
 export default async function Page({params}) {
   const {id} = params;

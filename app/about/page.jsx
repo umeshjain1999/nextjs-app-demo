@@ -2,6 +2,11 @@ import { Prata } from "next/font/google";
 
 export const prata = Prata({ subsets: ['latin'], weight: '400' })
 
+export const metadata = {
+  title: 'Rick and Morty - About',
+  description: 'NextJS Demo App to demonstrate page routing and other features',
+}
+
 export default function Page() {
   return (
     <main className="main">
